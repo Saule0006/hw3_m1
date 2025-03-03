@@ -2,14 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        double[] numbers = { 1.0, 3.6, -1.8, 9.7, 6.8, 9.3, -2.9, 5.1, -7.9, 4.1, 3.0, 3.6, -1.9, 8.1, 4.2, };
+
+        double sum = 0.0;
+        int count = 0;
+        boolean kk = false;
+
+        for (double num: numbers){
+            if (kk&&num>0){
+                sum += num;
+                count++;
+            } else if (num <0) {
+                kk = true;
+            }
         }
+        System.out.println(sum/count);
     }
 }
